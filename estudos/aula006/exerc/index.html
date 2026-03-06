@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>aula006</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <style>
+        .container{
+            background-color: rgba(245, 245, 245, 0.658);
+            margin-top: 100px;
+            border-radius: 8px;
+            padding: 20px;
+
+        }
+        body{
+            background: #3F5EFB;
+            background: radial-gradient(circle, rgba(63, 94, 251, 1) 0%, rgba(252, 70, 107, 1) 100%);
+            width: 100%;
+            height: 100vh;            
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container mt-6">
+        <div class="row">
+            <div class="row">
+                <form action="imc.php" method="post">
+                    <fieldset>
+                        <legend>Índice de Massa Corpórea (IMC)</legend>
+                        <div class="mb-3">
+                            <label for="Ipeso">Peso:</label>
+                            <input class="form-control" type="number" name="Peso" id="ipeso" step="any">
+                            <label for="Ialtura">Altura:</label>
+                            <input class="form-control" type="number" name="Altura" id="Ialtura" step="any">
+                        </div>
+                        <div class="mb-3">
+                            <button type="submit" class="btn btn-secondary">Enviar</button>
+                            <button type="reset" class="btn btn-danger">Limpar</button>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+            <hr>
+            <div class="row">
+                <form action="cars.php" method="post">
+                    <fieldset>
+                        <legend>Faturamento de Locadora de Veículos</legend>
+
+                        <div class="mb-3">
+                            <p>Tipo do carro:</p>
+                            <div class="row mb-3">
+                                <div class="col-6">
+                                    <input class="form-check-input" type="radio" name="Tipo" id="Iluxo" value="Luxo">
+                                    <label class="form-check-label" for="Iluxo">Luxuoso</label>
+                                </div>
+                                <div class="col-6">
+                                    <input class="form-check-input" type="radio" name="Tipo" id="Ipopular"
+                                        value="Popular">
+                                    <label class="form-check-label" for="Ipopular">Popular</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <label for="Idia">Dias alugado</label>
+                                <input class="form-control" type="number" name="Dias" id="Idia">
+                                <label for="Ikm">Kms rodados</label>
+                                <input class="form-control" type="number" name="Km" id="Ikm" step="any">
+                            </div>
+
+                        </div>
+                        <div class="mb-3">
+                            <button type="submit" class="btn btn-secondary">Enviar</button>
+                            <button type="reset" class="btn btn-danger">Limpar</button>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+            <hr>
+            <div class="row">
+                <form action="PVS.php" method="post">
+                    <fieldset>
+                        <legend>Recompensas do Programa Vida Saudável</legend>
+
+                        <div class="mb-3">
+                            <label for="Ihora">Horas praticadas no mês:</label>
+                            <input class="form-control" type="number" name="Horas" id="Ihora" step="any">
+                        </div>
+                        <div class="mb-3">
+                            <button type="submit" class="btn btn-secondary">Enviar</button>
+                            <button type="reset" class="btn btn-danger">Limpar</button>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
