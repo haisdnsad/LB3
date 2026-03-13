@@ -10,59 +10,78 @@
 </head>
 
 <body>
-    <div class="container">
-        <div class="row">
-            <form action="SAE.php" method="post">
-                <fieldset>
-                    <legend>Sistema de Aprovação Escolar</legend>
-                    <label for="In1">1° nota: </label>
-                    <input type="number" name="Nota1" id="In1" max="10" min="0" step=".1">
-                    <label for="In2">2° nota: </label>
-                    <input type="number" name="Nota2" id="In2" max="10" min="0" step=".1">
-                    <label for="In3">3° nota: </label>
-                    <input type="number" name="Nota3" id="In3" max="10" min="0" step=".1">
-                    <label for="Ifreq">Frequência: </label>
-                    <input type="number" name="Freq" id="Ifreq" max="100" min="0" step="any">
-                </fieldset>
-                <button type="submit">Enviar</button>
-                <button type="reset">Limpar</button>
-            </form>
+    <div class="container mt-4">
+        <div class="row mb-4">
+            <div class="col-md-6">
+                <div class="card p-3">
+                    <form action="SAE.php" method="post">
+                        <fieldset>
+                            <legend>Sistema de Aprovação Escolar</legend>
+                            <label for="In1" class="form-label">1° nota:</label>
+                            <input type="number" class="form-control mb-2" name="Nota1" id="In1" max="10" min="0"
+                                step=".1">
+                            <label for="In2" class="form-label">2° nota:</label>
+                            <input type="number" class="form-control mb-2" name="Nota2" id="In2" max="10" min="0"
+                                step=".1">
+                            <label for="In3" class="form-label">3° nota:</label>
+                            <input type="number" class="form-control mb-2" name="Nota3" id="In3" max="10" min="0"
+                                step=".1">
+
+                            <label for="Ifreq" class="form-label">Frequência:</label>
+                            <input type="number" class="form-control mb-3" name="Freq" id="Ifreq" max="100" min="0"
+                                step="any">
+                        </fieldset>
+                        <button type="submit" class="btn btn-primary">Enviar</button>
+                        <button type="reset" class="btn btn-secondary">Limpar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="row mb-4">
+            <div class="col-md-6">
+                <div class="card p-3">
+                    <form action="CTEE.php" method="post">
+                        <fieldset>
+                            <legend>Calculadora de Tarifas de Energia Elétrica</legend>
+                            <label for="Ikwh" class="form-label">kWh consumidos:</label>
+                            <input type="number" class="form-control mb-2" name="kWh" id="Ikwh" step="any">
+
+                            <label for="Iimovel" class="form-label">Instalação do imóvel:</label>
+                            <select class="form-select mb-3" name="imovel" id="Iimovel">
+                                <option value="R">Residencial</option>
+                                <option value="C">Comercial</option>
+                                <option value="I">Industrial</option>
+                            </select>
+                        </fieldset>
+                        <button type="submit" class="btn btn-primary">Enviar</button>
+                        <button type="reset" class="btn btn-secondary">Limpar</button>
+                    </form>
+                </div>
+            </div>
         </div>
         <div class="row">
-            <form action="CTEE.php" method="post">
-                <fieldset>
-                    <legend>Calculadora de Tarifas de Energia Elétrica</legend>
-                    <label for="Ikwh">kWh consumidos:</label>
-                    <input type="number" name="kWh" id="Ikwh" step="any">
-                    <label for="Iimovel">instalação do imóvel</label>
-                    <select name="imovel" id="Iimovel">
-                        <option value="R">Residencial</option>
-                        <option value="C">Comercial </option>
-                        <option value="I">Industrial </option>
-                    </select>
-                </fieldset>
-                <button type="submit">Enviar</button>
-                <button type="reset">Limpar</button>
-            </form>
-        </div>
-        <div class="row">
-            <form action="SDE.php" method="post">
-                <fieldset>
-                    <legend>Sistema de Descontos para E-commerce</legend>
-                    <label for="Icompra">Valor da compra: </label>
-                    <input type="number" name="compra" id="Icompra" step=".01">
-                    <label for="Icate">Sua categoria:</label>
-                    <select name="categoria" id="Icate">
-                        <option value="C">Cliente comum</option>
-                        <option value="V">Cliente VIP</option>
-                        <option value="P">Cliente Premium</option>
-                    </select>
-                </fieldset>
-                <button type="submit">Enviar</button>
-                <button type="reset">Limpar</button>
-            </form>
+            <div class="col-md-6">
+                <div class="card p-3">
+                    <form action="SDE.php" method="post">
+                        <fieldset>
+                            <legend>Sistema de Descontos para E-commerce</legend>
+                            <label for="Icompra" class="form-label">Valor da compra:</label>
+                            <input type="number" class="form-control mb-2" name="compra" id="Icompra" step=".01">
+                            <label for="Icate" class="form-label">Sua categoria:</label>
+                            <select class="form-select mb-3" name="categoria" id="Icate">
+                                <option value="C">Cliente comum</option>
+                                <option value="V">Cliente VIP</option>
+                                <option value="P">Cliente Premium</option>
+                            </select>
+                        </fieldset>
+                        <button type="submit" class="btn btn-primary">Enviar</button>
+                        <button type="reset" class="btn btn-secondary">Limpar</button>
+                    </form>
+                </div>
+            </div>
         </div>
     </div>
+
 
 
 
