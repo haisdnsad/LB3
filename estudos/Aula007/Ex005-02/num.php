@@ -11,17 +11,30 @@
 <body>
     <?php 
         $numero = $_GET['num']??false;
-        if(!$numero)
-            echo "O carai oia ai "
+        
+        
+           
 
     ?>
     <div class="container-sm card ">
         <h1 class='text-center font-monospace' >Tabuada</h1>
         <div class="card mb-3">
+            <table class="table table-hover table-striped table-bordered">
             <?php 
+            if($numero != false) {
             for($c=0;$c<11;$c++){
-                echo "<p class='font-monospace '>$c x $numero = " . $numero*$c . "</p>";
+                echo "<tr>
+                   <td class='text-center'>$c</td><td class='text-center'>x</td><td class='text-center'>$numero</td><td class='text-center'>=</td><td class='text-center'>" . $numero*$c . "</td>
+                </tr>";
             }
+        ?>
+        </table>
+        <?php 
+         } else {
+            echo '<div class="alert alert-danger" role="alert"> Valor numerico nao informado! Por favor, tente novamente </div>
+            ';
+        }
+            
             
             ?>
             <h2> </h2>
